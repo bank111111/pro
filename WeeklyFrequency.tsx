@@ -19,8 +19,10 @@ export const WeeklyFrequency = ({ control, errors }: any) => (
 
                 // Define ranges explicitly
                 const ranges = {
-                    "Mon-Fri": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                    "Sat-Sun": ["Saturday", "Sunday"]
+                    "Mon-Fri": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Sat-Sun"],
+                    "Sat-Sun": ["Saturday", "Sunday"],
+                    "Tue-Sat": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                    "Mon-Sat": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
                 };
 
                 // Check if any range is selected

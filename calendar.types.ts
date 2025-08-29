@@ -90,3 +90,4 @@ export  const minuteOptions = Array.from({ length: 60 }, (_, i) => i.toString().
 
   // Annual day options (1-366)
 export  const annualDayOptions = Array.from({ length: 366 }, (_, i) => (i + 1).toString());
+export const businessDayOptions = ['Business Day', '1st Business Day', '2nd Business Day', '3rd Business Day', '4th Business Day', '5th Business Day'];

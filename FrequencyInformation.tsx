@@ -78,6 +78,9 @@ const FrequencyInformation = ({
       console.log("Duplicate record found:", data);
       return;
   }
+  if(data.frequency.trim().toLowerCase() === 'daily'){
+      data.runDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday','Saturday','Sunday'];
+  }
     if (editIndex !== null) {
     // Edit mode: update the schedule
     const updated = schedules.map((item, idx) => idx === editIndex ? data : item);
@@ -352,7 +355,7 @@ const FrequencyInformation = ({
                         <td className="py-3 px-4">
                           <div>
                             <div className="text-sm text-gray-900">
-                              Job {jobName} runs {frequency} at {time} hrs (Local LPAR Time) thru {days}
+                              Job {jobName} runs {frequency} at {time} hrs (Local LPAR Time) {days}
                             </div>
                             {holidayNote && (
                               <div className="text-xs text-gray-600 mt-1">
